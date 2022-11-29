@@ -47,7 +47,7 @@ if __name__ == "__main__":
         img_edges = cv2.Canny(blur, threshold1=30, threshold2=115, apertureSize=3)
 
     #dilation
-    se = np.ones((1, 1), dtype='uint8') #strucuring element
+    se = np.ones((1, 1), dtype='uint8') #structuring element
     dilated =cv2.dilate(img_edges,se, iterations =2)
     
     #finding contours
